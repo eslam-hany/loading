@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loader{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+        }
+        .circle{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+            animation:  loading 2s infinite linear;
+        }
+        .circle:nth-child(1){
+            background-color: red;
+            animation-delay: 0.5s;
+        }
+        .circle:nth-child(2){
+            background-color: green;
+            animation-delay: 1.0s;
+        }
+        .circle:nth-child(3){
+            background-color: blue;
+            animation-delay: 1.5s;
+        }
+        @keyframes loading{
+            0%,100%{
+                transform: translateY(5px);
+            }
+            50%{
+                transform: translateY(-30px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+</html>
